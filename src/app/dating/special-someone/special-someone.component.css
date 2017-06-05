@@ -1,0 +1,6 @@
+.interest-heading, .matchType{
+    float: left;
+}
+.matchType select:focus{
+    box-shadow: none;
+}

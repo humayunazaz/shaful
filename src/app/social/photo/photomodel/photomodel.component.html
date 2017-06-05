@@ -1,0 +1,21 @@
+<div class="modal fade" id="photoModel" role="dialog" (window:keyright)="move($event)">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body photoModel" *ngIf="photo != '' && photo != undefined">
+        <div class="main-image">
+          <img src="{{photo.publicUrl}}" class="img-responsive"/>
+        </div>
+        <div class="navigation-here">
+          <div class="each-navi left" (click)="nextPhoto(prevId)" *ngIf="prevId != undefined"
+          >
+            <i class="fa fa-angle-left"></i>
+          </div>
+          <div class="each-navi right" (click)="nextPhoto(nextId)" *ngIf="nextId != undefined"
+          >
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.jobPost-form{
+    float: left;
+    width: 100%;
+    margin: auto;
+}
+.jobPost-form h3{
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+input, select{
+    border-radius: 0;
+    height: 35px;
+}
+button{
+    width: 100px;
+    border-radius: 0;
+}
+.form-here{
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    background: #fafbfc;
+    padding: 15px 20px;
+}
+.form-here .form-group.half-input{
+    float: left;
+    width: 50%;
+}
+.form-here .form-group{
+    float: left;
+    width: 100%;
+}
+.form-here .form-group label{
+    padding: 13px 15px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.form-here .form-group input, .form-here .form-group select{
+    height: 46px;
+    border-radius: 3px;
+}
+.form-here .form-group input:focus, .form-here .form-group select:focus{
+    box-shadow: none;
+}
+.form-here .submit-button{
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.form-here .submit-button button{
+    float: right;
+}
+/*later*/
+.input-group {
+    padding: 0 15px;
+
+}
+.jobPost-form h3 span.fa{
+    font-size: 20px;
+}
+.web-input .input-group{
+    padding: 0 15px;
+}
+.web-input .input-group input{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

@@ -1,0 +1,14 @@
+<div class="modal fade" id="videoModel" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body photoModel">
+        <div class="main-image">
+          <video controls *ngIf="content != '' && content != undefined">
+            <source src="{{content.publicUrl}}" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

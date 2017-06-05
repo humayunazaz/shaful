@@ -1,0 +1,57 @@
+<div class="boxIn_lft">
+  <bs-loader [loading]="loading" [error]="error" [height]="'770'"></bs-loader>
+  <ul class="nav nav-tabs grand-child" role="tablist" *ngIf="!loading && !error">
+    <li role="presentation" *ngFor="let tabsHead of tabsHeads"
+      [ngClass]="{
+        active: clickedTab == tabsHead.title
+      }"
+    >
+      <a
+      data-toggle="tab"
+      aria-controls="tabsHead.title"
+      role="tab"
+      href="#{{tabsHead.id}}"
+      (click)="clicked(tabsHead)"
+      >
+      <span>
+        <img class="Ione" src="{{tabsHead.icon1}}">
+        <img class="Itwo" src="{{tabsHead.icon2}}">
+      </span>
+      <span>{{tabsHead.title}}</span>
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content" *ngIf="!loading && !error">
+    <div class="tab-pane" role="tabpanel" *ngFor="let tabsHead of tabsHeads"
+      [ngClass]="{
+        active: clickedTab == tabsHead.title
+      }"
+      id="{{tabsHead.id}}"
+    >
+      <div>
+        <div class="box_mess">
+          <div class="rounPic">
+            <img src="{{userImg}}" class="img-circle">
+          </div>
+          <div class="textarePost w100">
+            <add-post (newPost)="updatePost($event)"></add-post>
+          </div>
+        </div>
+        <div class="postMain w100">
+          <div *ngIf="posts != ''">
+            <div class="postMList single-post-here" *ngFor="let post of posts">
+              <div class="boxPic">
+                <img src="{{userImg}}" class="img-responsive">
+              </div>
+              <div class="postArea">
+                <h3>{{post.user.full_name}}</h3>
+                <p [innerHTML]="post.body"></p>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

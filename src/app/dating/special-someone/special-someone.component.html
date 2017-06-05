@@ -1,0 +1,20 @@
+<div class="special-content dating-data">
+    <div class="interested">
+        <div class="interest-heading">
+            <h3>{{title}} Match</h3>
+            <p>Based on your Provided information <span>we can recommend the Following right matches for you.</span></p>    
+        </div>
+        <div class="matchType">
+            <select id="match" name="match" class="form-control" (change)="updateResult($event)">
+                <option value="mutual">Mutual Match</option>
+                <option value="reverse">Reverse Match</option>
+            </select>
+        </div>
+    </div><!--interested-->
+    <single-date [url]="url" [special]="special"></single-date>
+    <div class="w100 text-center more">
+        <a href="#">
+            <img src="../../../assets/img/more.png">
+        </a>
+    </div>
+</div>

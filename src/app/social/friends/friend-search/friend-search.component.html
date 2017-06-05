@@ -1,0 +1,23 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.form)">
+  <div class="input-group-btn">
+		<button type="submit" class="btn btn-default custom-btn" [disabled]="!f.valid">
+			Search Friends
+		</button>
+    <div class="form-group">
+      <input
+        class="form-control input-lg"
+        placeholder="Search for your friends..."
+        id="search-project"
+        type="text"
+        name="search"
+        #search="ngModel"
+        ngModel
+        required
+        (keyup)="inputChange($event)"
+        >
+    </div>
+    <button type="submit" class="btn btn-default" [disabled]="!f.valid">
+    	<i class="fa fa-fw fa-search fa-lg"></i>
+    </button>
+  </div>
+</form>

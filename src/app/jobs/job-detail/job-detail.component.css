@@ -1,0 +1,17 @@
+.postMain { display:block; margin:0 0; background:#fff;}
+.postMList2 { float:left; width:100%; position:relative; padding:14px 17px 20px 88px; min-height:100px; margin:3px 0 0 0; border-bottom:1px solid #e1e9f0;}
+.postMList2 .drop2poz button { font-size:15px;}
+.postMList2 .Drop2 i { font-size:14px; margin:0 0 0 7px;}
+.postMList2 .Drop2 { margin:12px 9px 0 20px;}
+.postMList2 p { float:left; width:87%; line-height:21px; margin:0 0 6px; font-size:15px; color:#292b2c;font-family: 'AvenirNextLTW01RegularRegular';letter-spacing: 0;}
+.postMList2 span { color:#e50431; display: inline-block;}
+.postMList2 a {color:#e50431;display: inline-block;}
+.postMList2 h3 {float:left; width:100%; margin:0 0 3px; font-size:15px; color:#292b2c;font-family: 'AvenirNextLTPro-Demi'; letter-spacing:.3px;}
+.postMList2 h2 {float: left;width: 100%;margin: 0px 0 0px;font-size: 14px;color: #cbcbcb;letter-spacing: .3px;}
+.postMList2 img { margin:10px 0;}
+.boxPic2 { width:60px; height:60px; position:absolute; left:17px; top:17px; border:1px solid #eaeaea;}
+.boxPic2 img { float:left; width:100%; margin:0!important;}
+.comentPics { padding:10px 0 10px 21px;}
+.rounPicR {border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px; width:44px; height:44px; box-shadow:0px -1px 0px 1px rgba(255,255,255, .7); -webkit-box-shadow:0px -1px 0px 1px rgba(255,255,255, .7); -moz-box-shadow:0px -1px 0px 1px rgba(255,255,255, .7); float:left; margin:0 0 0 -21px;}
+.rounPicR img { border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px; float:left; width:100%; margin:0;}
+.comentPics span{ font-size:12px;color: #cbcbcb; float:left; margin:20px 0 0 10px;}

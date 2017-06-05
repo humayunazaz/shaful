@@ -1,0 +1,18 @@
+<div class="header-search">
+  <input
+    id="search-fld"
+    type="text"
+    name="param"
+    placeholder="Search"
+    [(ngModel)]='query'
+    (keyup)="filter()"
+  >
+  <i class="fa fa-search"></i>
+  <div class="search-result" *ngIf="filteredList.length > 0">
+      <ul *ngFor="let item of filteredList" >
+          <li >
+              <a (click)="gotoSingle(item)">{{item.value}}</a>
+          </li>
+      </ul>
+  </div>
+</div>

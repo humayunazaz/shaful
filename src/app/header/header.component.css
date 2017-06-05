@@ -1,0 +1,27 @@
+.notifi{
+  width: 222px;
+}
+.notifi notifi{
+  float: left;
+  width: 74px;
+}
+.btn-header{
+  margin-top: 0;
+  padding: 17px 8px;
+  cursor: pointer;
+}
+.btn-header i{
+  font-size: 18px;
+  color: #fff;
+}
+.user-detail{
+  width: 230px;
+}
+.header-dropdown-list{
+  padding: 0;
+  float: left;
+  margin-bottom: 0;
+}
+.header-dropdown-list li a{
+  margin-top: 5px;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "name" : "social",
+    "img": "bximage1"
+  },
+  {
+    "name" : "jobs",
+    "img": "bximage2"
+  },
+  {
+    "name" : "dating",
+    "img": "bximage4"
+  },
+  {
+    "name" : "q & a",
+    "img": "bximage5"
+  },
+  {
+    "name" : "reviews",
+    "img": "bximage7",
+    "notifi": "7"
+  },
+  {
+    "name" : "matrimonial",
+    "img": "bximage8"
+  }
+]

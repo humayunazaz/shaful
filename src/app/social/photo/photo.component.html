@@ -1,0 +1,27 @@
+<div class="friends-content photo-content">
+  <div class="col-sm-12 bs-photo" *ngIf="!loading && !error">
+    <div class="heading col-sm-6">
+      <h4>Photos</h4>
+    </div>
+    <div class="col-sm-6 mybuttons">
+      <div class="buttons">
+          <label class="upload-button">
+            <input type="file"
+                  class="hidden"
+                  ngFileSelect
+                  [options]="options"
+                  (onUpload)="handleUpload($event)"
+                  name="someFile"
+                  (onPreviewData)="handlePreviewData($event)"
+                  >
+            Upload Photo
+          </label>
+      </div>
+    </div>
+    <p [ngClass]="{
+      hidden : loadingPic == false
+    }">The picture is uploading.</p>
+    <photo-child [tabsDatas]='tabsData' [photos]="photos" [albums]="albums" [photoIds]="photoIds"></photo-child>
+  </div>
+  <bs-loader [loading]="loading" [error]="error" [height]="'600'"></bs-loader>
+</div>

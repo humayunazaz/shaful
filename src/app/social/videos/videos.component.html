@@ -1,0 +1,27 @@
+<div class="friends-content photo-content video-content">
+  <div class="col-sm-12">
+    <div class="heading col-sm-6">
+      <h4>Videos</h4>
+    </div>
+    <div class="col-sm-6 mybuttons">
+      <div class="buttons">
+          <label class="upload-button">
+            <input type="file"
+                  class="hidden"
+                  ngFileSelect
+                  [options]="options"
+                  (onUpload)="handleUpload($event)">
+            Upload Video
+          </label>
+      </div>
+    </div>
+    <p class="uploading-message" [ngClass]="{
+      hidden : loadingVideo == false
+    }">The video is uploading.</p>
+    <bs-loader [loading]="loading" [error]="error"></bs-loader>
+    <div class="videos-here col-sm-12" *ngIf="videos != ''">
+      <div class="superbox-list" *ngFor="let video of videos">
+        <img src="{{video.thumbnailUrl}}" class="img-responsive" (click)="model(video)" data-toggle="modal" data-target="#videoModel">
+      </div>
+    </div>
+<bs-videomodel [content]="videoContent"></bs-videomodel>

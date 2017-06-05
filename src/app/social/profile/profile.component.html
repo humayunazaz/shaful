@@ -1,0 +1,58 @@
+<bs-loader [loading]="loading" [error]="error" [height]="'770'"></bs-loader>
+<div *ngIf="!loading && !error" class="profile-content">
+  <div class="boxIn_rit bsProfile">
+      	<div class="cprofile">
+          	<div class="cprof1">
+  				<div class="cprof2">
+                  	<img src="{{user.user.profile_image}}">
+                    <input type="file"
+                        class="hidden"
+                        ngFileSelect
+                        [options]="options"
+                        (onUpload)="handleUpload($event)"
+                        name="someFile"
+                      >
+                  </div><!--cprof2-->
+              </div><!--cprof1-->
+          </div><!--cprofile-->
+          <div class="profStatus">
+              <h2>{{user.user.full_name}}</h2>
+              <!--<p>{{user.title}}</p>-->
+          </div><!--profStatus-->
+          <div class="prof_info">
+          	<div class="w100">
+  				<label>Email</label>
+                  <p>{{user.user.email}}</p>
+              </div><!--w100-->
+              <div class="w100">
+  				<label>Mobile</label>
+                  <p>{{user.mobile}}</p>
+              </div><!--w100-->
+              <div class="w100">
+  				<label>Skill Level</label>
+                  <p>{{user.skill_level}}</p>
+              </div><!--w100-->
+              <div class="w100 bio">
+  				<label>Bio</label>
+                  <p>{{user.bio}}</p>
+              </div><!--w100-->
+              <div class="w100 mrgbot30">
+  				<label>Skills</label>
+                  <div class="w100">
+                  	<!-- <a class="butn clr1" *ngFor="let skill of user.skills">{{skill}}</a> -->
+                  </div><!--w100-->
+              </div><!--w100-->
+          </div><!--prof_info-->
+          <div class="smallPics" *ngIf="user.imgGallery">
+  			    <a *ngFor="let img of user.imgGallery"><img src="{{img}}"></a>
+          </div><!--smallPics-->
+          <div class="prof_info" *ngIf="user.event">
+          	<span>upcoming Events</span>
+          	<div class="w100" *ngFor="let event of user.upcommingEvents">
+    		    <label>{{event.title}}</label>
+                <p>{{event.date}}</p>
+            </div><!--w100-->
+          </div><!--prof_info-->
+  </div><!--boxIn_rit-->
+  <grand-child-tabs [tabsHeads]='tabsHead'></grand-child-tabs>
+</div>

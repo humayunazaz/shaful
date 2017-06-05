@@ -1,0 +1,26 @@
+<div class="dating-discover">
+     <div class="boxIn_lft">
+        <div class="w100 dating-data">
+            <div class="box_mess2">
+                <div class="w100">
+                    <div class="w100 pozrel">
+                        <find-date></find-date>
+                    </div>
+                </div>                  
+            </div><!--box_mess-->
+            <div class="interested w100">
+                <h3>Dating you may be interested in</h3>
+                <p>Set up your dating preferences <span>so we can recommend the right matches to you.</span></p>
+                
+            </div><!--interested-->
+            <single-date [url]="url"></single-date>                                            
+            <div class="w100 text-center more"><a><img src="../../../assets/img/more.png"></a></div>
+        </div><!--w100-->
+    </div><!--boxIn_lft-->
+    <div class="boxIn_rit">
+      <div class="reportHed bs-dating-recommend">
+          <bs-recommended [recUrl]="recUrl" [dating]="dating"></bs-recommended>
+          <bs-adz [adz]="adz"></bs-adz>        
+      </div><!--reportHed-->
+  </div><!--boxIn_rit-->
+</div>

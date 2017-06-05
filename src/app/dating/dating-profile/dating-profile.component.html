@@ -1,0 +1,239 @@
+<div class="dating-profile-container">                   
+	<h3>Your Dating profile</h3>
+	<div class="user-picture">
+		<div class="profile-picture">
+			<img src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png" width="200" height="200" class="ghost" alt="rizwan javed">
+		</div>
+		<button class="edit-photo no-photo" id="control_gen_3">
+			<span class="change-photo-msg">Change photo</span>
+		</button>
+	</div>
+	<div class="form update-profile-form">
+		<form class="form-validate form-horizontal" [formGroup]="datingForm" (ngSubmit)="onSubmit()">     
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12"> First Name<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						type="text" 
+						placeholder="FIRST NAME"
+						formControlName="firstName"   
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Last Name<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						placeholder="LAST NAME" 
+						type="text"
+						formControlName="lastName"
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Display Name<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						type="text" 
+						placeholder="Name"
+						formControlName="displayName"
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Date Of Birth<span class="required">*</span></label>
+					<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						name="fullname" 
+						type="text" 
+						placeholder="DOB"
+						formControlName="dateOfBirth"
+					>
+				</div> 
+			</div>
+			<div class="form-group full-length" formGroupName="height">
+				<label for="cname" class="control-label col-sm-12">Your Height<span class="required">*</span></label>
+				<div class="col-sm-6">
+					<select class="form-control" formControlName="feet">
+						<option value="" selected>Feet</option>
+						<option value="7 feet">7 feet</option>
+						<option value="6 feet">6 feet</option>
+						<option value="5 feet">5 feet</option>
+						<option value="4 feet">4 feet</option>
+						<option value="4 feet">3 feet</option>
+					</select>
+				</div>
+				<div class="col-sm-6">
+					<select class="form-control" formControlName="inch">
+						<option value="" selected>Inch</option>
+						<option value="9 inches">9 inches</option>
+						<option value="8 inches">8 inches</option>
+						<option value="7 inches">7 inches</option>
+						<option value="6 inches">6 inches</option>
+						<option value="5 inches">5 inches</option>
+						<option value="4 inches">4 inches</option>
+						<option value="3 inches">3 inches</option>
+						<option value="2 inches">2 inches</option>
+						<option value="1 inches">1 inches</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Gender<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="gender">
+						<option value="" selected>Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Interested In<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="interestedIn">
+						<option value="" selected>Interested In</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Relationship History<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="relationshipHistory">
+						<option value="" selected>Pelation History</option>
+						<option value="Single">Single</option>
+						<option value="Married">Married</option>
+						<option value="Divorced">Divorced</option>    
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Childrens<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="children">
+						<option value="" selected>Childrens</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Your Hair Color<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="hairColor">
+						<option value="" selected>Hair Color</option>
+						<option value="Black">Black</option>
+						<option value="Brown">Blonde</option>
+						<option value="Dark brown">Dark brown</option>
+						<option value="Light brown">Light brown</option>    
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Your Eye Color<span class="required">*</span></label>
+					<div class="col-sm-12">
+					<select class="form-control" formControlName="eyeColor">
+						<option value="" selected>Eye Color</option>
+						<option value="Black">Black</option>
+						<option value="Brown">Blue</option>
+						<option value="Dark brown">Dark brown</option>
+						<option value="Light brown">Light brown</option>    
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Body Type<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="bodyType">
+						<option value="" selected>Body Type</option>
+						<option value="Slim">Slim</option>
+						<option value="Fat">Fat</option>
+						<option value="Muscular">Muscular</option>   
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Smoking<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="smoking">
+						<option value="" selected>Smoking</option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Education Level<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="education">
+						<option value="" selected>Education</option>
+						<option value="High School">High School</option>
+						<option value="Post Collage">Post Collage</option>
+						<option value="Graduation and above">Graduation and above</option>   
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Religion<span class="required">*</span></label>
+				<div class="col-sm-12">
+					<select class="form-control" formControlName="religion">
+						<option value="" selected>Religion</option>
+						<option value="Muslim">Muslim</option>
+						<option value="Christen">Christen</option>
+						<option value="Jews">Jews</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Occupation type<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						type="text" 
+						placeholder="Occupation"
+						formControlName="occupation"      
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Salary Range<span>*</span></label>
+				<div class="input-group col-sm-12">
+					<span class="input-group-addon">$</span>
+					<input type="text" class="form-control" formControlName="salary" placeholder="Salary">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Your Native Language<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						type="text" 
+						placeholder="Language"
+						formControlName="language"
+					>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cname" class="control-label col-sm-12">Place You grown up<span>*</span></label>
+				<div class="col-sm-12">
+					<input 
+						class="form-control valid" 
+						type="text" 
+						placeholder="You grown up"
+						formControlName="place"
+					>
+				</div>
+			</div>
+			<div class="w100 update-submit">                    
+				<button class="postBTN fr stBTN" type="submit">Save And Continue
+				</button>                                    
+			</div>   
+		</form>
+	</div>
+</div>

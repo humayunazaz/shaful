@@ -1,0 +1,13 @@
+<li *ngFor="let tab of childTabs"
+  [ngClass]="{
+    active: childTab == tab.name
+  }"
+>
+  <a (click)="clicked(tab.name)">
+    <span>
+    	<img class="Ione" src="{{tab.icon1}}">
+      <img class="Itwo" src="{{tab.icon2}}">
+    </span>
+    <span>{{tab.name}}</span>
+  </a>
+</li>

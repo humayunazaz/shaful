@@ -1,0 +1,24 @@
+<aside id="left-panel"
+  [ngClass]="{
+    'hide-panel': panelHide
+  }"
+>
+  <!-- User info -->
+  <div class="login-info">
+  	CHOOSE NETWORK
+  </div>
+  <nav class="NavMain">
+    <ul>
+      <li *ngFor="let menu of menus"
+        [ngClass]="{
+          active: menu.name == clickMenu
+        }"
+      >
+				<a (click)="menuClick(menu.name)">
+      	  <span class="{{menu.img}}"></span>
+      	  <span class="menu-item-parent"><p>{{menu.name}}</p></span>
+          <span class="badge pull-right inbox-badge margin-right-13" *ngIf="menu.notifi">{{menu.notifi}}</span>
+        </a>
+			</li>
+    </ul>
+  </nav>

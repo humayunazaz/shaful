@@ -1,0 +1,55 @@
+<header id="header">
+	<div id="logo-group" class="pull-left">
+		<a id="logo"><span> <img src="../../assets/img/logo.png" alt=""> </span></a>
+  </div>
+	<div *ngIf="login"
+		[ngClass]="{
+			'mobile-options' : mobile == true
+		}"
+	>
+		<div class="pull-left bs-autosearch">
+			<div id="search-mobile" class="btn-header transparent pull-right" (click)="mobileSearch()">
+					<span> <a title="Search"><i class="fa fa-search"></i></a> </span>
+			</div>
+			<auto-complete></auto-complete>
+		</div>
+		<div class="pull-right user-detail" *ngIf="!isLoading && !error">
+			<div id="cancel-search" title="Cancel Search" (click)="cancleSearch()">
+				<i class="fa fa-times"></i>
+			</div>
+			<div class="btn-header pull-right">
+				<span><a (click)="menuToggle()"><i class="fa fa-reorder"></i></a> </span>
+			</div>
+			<ul class="header-dropdown-list padding-5 user">
+				<li>
+					<a class="dropdown-toggle no-margin userdropdown userName" data-toggle="dropdown">
+						<img src="{{user.img}}" alt="" class="online img-circle" />
+						<span>{{username}}<i class="fa fa-caret-down"></i></span>
+					</a>
+					<ul class="dropdown-menu pull-right userName-drop">
+						<li>
+							<a class="padding-10 padding-top-0 padding-bottom-0" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="pull-right notifi" *ngIf="!isLoading && !error">
+			<div *ngFor="let noti of notifi">
+				<notifi [icon]='noti.icon' [value]='noti.value'></notifi>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="!login">
+		<div class="signup-login-here">
+			<div class="signup-here" *ngIf="sign == 'signin'">
+				<p>Need an account</p>
+				<button (click)="gotoSignup()" class="btn btn-danger">Create account</button>
+			</div>
+			<div class="signup-here" *ngIf="sign == 'signup'">
+				<p>Already registered</p>
+				<button (click)="gotoSignin()" class="btn btn-danger">Sign in</button>
+			</div>
+		</div>
+	</div>
+</header>

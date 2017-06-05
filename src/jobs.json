@@ -1,0 +1,87 @@
+[
+    {
+        "id": "1",
+        "title": "Application Developer",
+        "img": "../../../assets/img/user2.jpg",
+        "companyName": "Tera Data",
+        "location":{
+            "country":"Pakistan",
+            "city": "Islamabad"
+        },
+        "connects": [
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png"
+        ],
+        "totalConnects" : "8"
+    },
+    {
+        "id": "2",
+        "title": "Application Developer",
+        "img": "../../../assets/img/user2.jpg",
+        "companyName": "Tera Data",
+        "location":{
+            "country":"Pakistan",
+            "city": "Islamabad"
+        },
+        "connects": [
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png"
+        ],
+        "totalConnects" : "8"
+    },
+    {
+        "id": "3",
+        "title": "Application Developer",
+        "img": "../../../assets/img/user2.jpg",
+        "companyName": "Tera Data",
+        "location":{
+            "country":"Pakistan",
+            "city": "Islamabad"
+        },
+        "connects": [
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png"
+        ],
+        "totalConnects" : "8"
+    },
+    {
+        "id": "4",
+        "title": "Application Developer",
+        "img": "../../../assets/img/user2.jpg",
+        "companyName": "Tera Data",
+        "location":{
+            "country":"Pakistan",
+            "city": "Islamabad"
+        },
+        "connects": [
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png"
+        ],
+        "totalConnects" : "8"
+    },
+    {
+        "id": "5",
+        "title": "Application Developer",
+        "img": "../../../assets/img/user2.jpg",
+        "companyName": "Tera Data",
+        "location":{
+            "country":"Pakistan",
+            "city": "Islamabad"
+        },
+        "connects": [
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png",
+            "../../../assets/img/avatars/sunny-big.png"
+        ],
+        "totalConnects" : "8"
+    }
+]

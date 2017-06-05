@@ -1,0 +1,28 @@
+<div class="box_hed">
+  <p *ngIf="!dating">Recommended</p>
+  <p *ngIf="dating">Featured Dating</p>
+  <a>Show All</a>
+</div>
+<div *ngFor="let recommend of recommends">
+  <div class="reportList" *ngIf="!jobs && !dating">
+    <p>
+      {{recommend.title}}
+      <img src="{{recommend.icon1}}" class="img-responsive ic1">
+      <img src="{{recommend.icon2}}" class="img-responsive ic2">
+    </p>
+    <span>{{recommend.desc}}</span>
+  </div>
+  <div *ngIf="jobs" class="reportList2">
+    <p>{{recommend.title}}</p>
+    <img class="ic11" src="{{recommend.icon1}}">
+    <img class="ic22" src="{{recommend.icon2}}">
+    <span>{{recommend.company}}</span>
+    <span>{{recommend.desc}}</span>
+  </div>
+  <div *ngIf="dating" class="reportList2">
+    <p>{{recommend.name}}</p>
+    <img class="ic11" src="../../../assets/{{recommend.icon1}}">
+    <img class="ic22" src="../../../assets/{{recommend.icon2}}">
+    <span>{{recommend.lang}}</span>
+  </div>
+</div>

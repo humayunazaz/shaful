@@ -1,0 +1,151 @@
+<div class="jobPost-form">
+    <div class="col-md-12 form-here">
+        <h3 *ngIf="!anotherJob"><span class="fa fa-briefcase"></span> Post a New Job</h3>
+        <h3 *ngIf="anotherJob">Post another Job</h3>
+        <div class="form">
+            <form class="form-validate" [formGroup]="postJob" (ngSubmit)="onSubmit()">
+                <h4>Company Details</h4>
+                <hr>        
+                <div class="form-group half-input">
+                    <label for="cname" class="control-label col-sm-4">Company Name<span class="required">*</span></label>
+                    <div class="col-sm-8">
+                        <input 
+                            class="form-control valid" 
+                            type="text"
+                            formControlName="name"    
+                        >
+                    </div>
+                </div>
+                <div class="form-group half-input web-input">
+                    <label for="cname" class="control-label col-sm-4">Website<span>*</span></label>
+                    <div class="input-group col-sm-8">
+                        <span class="input-group-addon">Http://</span>
+                        <input type="text" class="form-control" formControlName="website" placeholder="Site">
+                    </div>
+			    </div>
+               
+                <h4>Jobs Details</h4>
+                <hr>
+                <div class="form-group half-input">
+                    <label for="cname" class="control-label col-sm-4">Job Title<span class="required">*</span></label>
+                    <div class="col-sm-8">
+                       
+                        <input 
+                            class="form-control valid" 
+                            type="text"
+                            formControlName="title"    
+                        >
+                    </div>
+                </div>
+                <div class="form-group half-input">
+                    <label for="title" class="control-label col-sm-4">Job Type<span class="required">*</span></label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="title" formControlName="type">
+                            <option value="">Select Job type</option>
+                            <option value="Full-Time">Full-Time</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Part-Time">Part-Time</option>
+                            <option value="Temporary">Temporary</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="ccomment" class="control-label col-lg-2">Job Description</label>
+                    <div class="col-lg-10">
+                        <p>Give details about the position, such as responsibilities & salary.</p>
+                        <textarea 
+                            class="form-control valid" 
+                            rows="5" 
+                            id="ccomment"
+                            formControlName="description"    
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="form-group half-input">
+                    <label for="category" class="control-label col-sm-4">Job Catagory<span class="required">*</span></label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="category" formControlName="category">
+                            <option value="">select category</option>
+                            <option value="Electrical">Electrical</option>
+                            <option value="Inspection">Inspection</option>
+                            <option value="Painting">Painting</option>
+                            <option value="Service">Service</option>
+                            <option value="Upholstry\">Upholstry</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Carpenter">Carpenter</option>
+                            <option value="Electrician">Electrician</option>
+                            <option value="Flooring">Flooring</option>
+                            <option value="Foundation Repair">Foundation Repair</option>
+                            <option value="General Maintence">General Maintence</option>
+                            <option value="Inspections">Inspections</option>
+                            <option value="Insulation">Insulation</option>
+                            <option value="Mason">Mason</option>
+                            <option value="Painter">Painter</option>
+                            <option value="Plumber">Plumber</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Food Service">Food Service</option>
+                            <option value="Bartender">Bartender</option>
+                            <option value="Cook">Cook</option>
+                            <option value="Hosting">Hosting</option>
+                            <option value="Waiter">Waiter</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="Realtors">Realtors</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Sys Admin">Sys Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group half-input">
+                    <label for="cname" class="control-label col-sm-4">Salary <span class="required">*</span></label>
+                    <div class="col-sm-8">
+                        <select class="form-control" id="location" formControlName="salary">
+                            <option value="">Select a salary…</option>
+                            <option value="Less than 20,000">Less than 20,000</option>
+                            <option value="20,000 – 40,000">20,000 – 40,000</option>
+                            <option value="40,000 – 60,000">40,000 – 60,000</option>
+                            <option value="60,000 – 80,000">60,000 – 80,000</option>
+                            <option value="80,000 – 100,000">80,000 – 100,000</option>
+                            <option value="100,000 and above">100,000 and above</option>
+                        </select>
+                    </div>
+                </div>
+                <h4>Jobs Location</h4>
+                <hr>
+                <div class="form-group">
+                    <label for="location" class="control-label col-sm-2">Location<span class="required">*</span></label>
+                    <div class="col-sm-10">
+                       <p> Leave blank if the location of the applicant does not matter e.g. the job involves working from home.</p>
+                        <input type="text" [(ngModel)] = "address" 
+                            [options]='options' 
+                            (setAddress) = "getAddress($event)"
+                            class="form-control"
+                            formControlName="location"
+                            ng2-google-place-autocomplete/>
+                    </div>
+                </div>
+                <h4>How to Apply</h4>
+                <hr>
+                 <div class="form-group ">
+                     <label for="location" class="control-label col-sm-2"><span class="required"></span></label>
+                    <div class="col-sm-10">
+                        <p>Tell applicants how to apply – they will also be able to email you via the “apply” form on your job listing's page.</p>
+                        <textarea 
+                            class="form-control valid" 
+                            rows="5" 
+                            id="ccomment"
+                            formControlName="howApply"    
+                        ></textarea>
+                    </div>
+                </div>
+                
+
+                                    
+                <div class="form-group submit-button">
+                    <button class="btn btn-default btn-custom" type="submit" [disabled]="!postJob.valid">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

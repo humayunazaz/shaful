@@ -1,0 +1,44 @@
+<div class="dating-requests">
+    <div class="w100">
+        <ul class="nav nav-tabs pull-left in" id="myTab2">
+            <li class="active">
+                <a data-toggle="tab" href="#s11">
+                    <span class="">Request Invitations</span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#s22">
+                    <span class="">Sent Requests</span>
+                </a>
+            </li>
+        </ul>  
+        <div id="myTabContent2" class="tab-content">
+            <div class="tab-pane fade active in no-padding-bottom dating-data" id="s11">
+                <!---->
+                <div class="interested w100">
+                    <h3>Requests Pending</h3>
+                    <p>Still panding the Following <span>requests.</span></p>    
+                </div><!--interested-->
+                <single-date [url]="url" [receivedRequest]="receivedRequest"></single-date>
+                <div class="w100 text-center more">
+                    <a href="#">
+                        <img src="../../../assets/img/more.png">
+                    </a>
+                </div> 
+            </div><!--end of s11-->
+            <div class="tab-pane fade in no-padding-bottom dating-data" id="s22">
+                <!---->
+                <div class="interested w100">
+                    <h3>List of Sent Requests</h3>
+                    <p>Sent <span> requests.</span></p>    
+                </div><!--interested-->
+                <single-date [url]="url" [sentRequest]="sentRequest"></single-date>
+                <div class="w100 text-center more">
+                    <a>
+                        <img src="../../../assets/img/more.png">
+                    </a>
+                </div>
+            </div><!--end of s22-->
+        </div><!--end of myTabContent2-->                                                 
+    </div><!--w100-->
+</div>

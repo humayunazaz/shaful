@@ -1,0 +1,57 @@
+<form class="bs-filterDating" #f="ngForm" (ngSubmit)="formSubmit(f.form)">
+  <div class="form-group women">
+    <select name="womenInterested" #womenInterested="ngModel" ngModel id="selecter_basic" class="women-intrested">
+        <option>Man interested in Woman</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>                                            
+    </select>
+  </div>
+  <div class="form-group postal-code">
+    <input class="textinput fl v2" type="text" placeholder="Postal Code" name="postal" #postal="ngModel" ngModel>
+  </div>
+  <div class="form-group age-here">
+    <select name="firstAge" #firstAge="ngModel" ngModel id="selecter_basic" class="firstAge">
+        <option>20</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>                                            
+    </select>
+    <p class="v4">to</p>
+    <select name="lastAge" #lastAge="ngModel" ngModel id="selecter_basic" class="lastAge">
+        <option>30</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>                                            
+    </select>
+  </div>
+  <div class="form-group online">
+    <input type="checkbox" name="online" #online="ngModel" ngModel id="checkboxG1" class="css-checkbox" />
+    <label for="checkboxG1" class="css-label">Online</label>
+  </div>
+  <div class="form-group potos">
+    <input type="checkbox" name="potos" #potos="ngModel" ngModel id="checkboxG2" class="css-checkbox" checked/>
+    <label for="checkboxG2" class="css-label">With Potos</label>
+  </div>
+  <div class="Drop">
+    <div class="form-group">
+      <div class="col-md-12">
+        <select id="selectbasic" name="criteria" #criteria="ngModel" ngModel class="form-control">
+          <option value="">My Criteria</option>
+          <option value="month">Month</option>
+          <option value="agenda">Agenda</option>
+          <option value="year">Year</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="submit-button">
+    <button class="btn postBTN" type="submit">lets begin</button>
+  </div>
+</form>

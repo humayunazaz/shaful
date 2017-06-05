@@ -1,0 +1,96 @@
+<div class="login-here" [style.margin-top.px]="signupHeight">
+  <div class="login-form">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="sign-head">
+        <h3>Register is Free*</h3>
+      </div>
+      <div class="required-section">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <i class="fa fa-user"></i>
+            <input 
+              type="text" 
+              placeholder="username" 
+              name="username" 
+              formControlName="username"
+              class="form-control alert-danger"
+              [ngClass]="{
+                'alert-danger' : signupForm.controls.username.touched && signupForm.controls.username.errors
+              }"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <i class="fa fa-envelope"></i>
+            <input 
+              type="text" 
+              placeholder="email" 
+              name="email" 
+              class="form-control"
+              formControlName="email"
+              [ngClass]="{
+                'alert-danger' : signupForm.controls.email.touched && signupForm.controls.email.errors
+              }"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <i class="fa fa-lock"></i>
+            <input 
+              type="password" 
+              placeholder="password" 
+              name="password" 
+              formControlName="password" 
+              class="form-control"
+              [ngClass]="{
+                'alert-danger' : signupForm.controls.password.touched && signupForm.controls.password.errors
+              }"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <i class="fa fa-lock"></i>
+            <input 
+              type="password" 
+              placeholder="re-password" 
+              name="confirmpassword" 
+              formControlName="password_confirmation"
+              class="form-control"
+              [ngClass]="{
+                'alert-danger' : signupForm.controls.password_confirmation.touched && signupForm.controls.password_confirmation.errors
+              }"
+              >
+          </div>
+        </div>
+      </div>
+      <div class="form-group half-area">
+        <div class="col-sm-12">
+          <input 
+            type="text" 
+            placeholder="firstname" 
+            name="firstname" 
+            formControlName="firstname"
+            class="form-control" 
+            >
+        </div>
+      </div>
+      <div class="form-group half-area">
+        <div class="col-sm-12">
+          <input 
+            type="text" 
+            placeholder="lastname" 
+            name="lastname" 
+            formControlName="lastname"
+            class="form-control"
+          >
+        </div>
+      </div>
+      <div class="register-button">
+        <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

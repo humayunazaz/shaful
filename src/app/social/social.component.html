@@ -1,0 +1,11 @@
+<bs-flash [close]="close" [content]="content" [success]="success" [fail]="fail"></bs-flash>
+<section id="widget-grid" class="assumble">
+	<article class="col-sm-12 sortable-grid ui-sortable">
+    <ul class="nav nav-tabs pull-left child-tabs" id="myTab">
+      <child-tabs [childTabs]="childTabs" (update)="updateValue($event)"></child-tabs>
+    </ul>
+		<div class="child-tabs-content">
+			<router-outlet></router-outlet>
+		</div>
+  </article>
+</section>

@@ -1,0 +1,27 @@
+<div class="main-area">
+  <bs-header></bs-header>
+  <bs-menu *ngIf="login"></bs-menu>
+  <div id="main" [style.min-height.px]="height"
+    [ngClass]="{
+      menuHide: menuChange == true || !login
+    }"
+  >
+    <div id="content" 
+     [ngClass]="{
+       notLogin: !login
+     }"
+     [style.min-height.px]="height"
+    >
+      <router-outlet></router-outlet>
+    </div>
+    <div class="bs-footer">
+        <div class="col-xs-12 col-sm-12 text-right">
+          <span class="txt-color-white"> <span class="hidden-xs"> - Web Application Framework</span> © 2014-2015</span>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+

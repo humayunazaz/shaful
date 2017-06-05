@@ -1,0 +1,24 @@
+<div class="job-discovery">
+  <div class="left-content-area">
+    <div class="boxIn_lft">
+      <find-job (searchJob)="search($event)"></find-job>
+      <div class="interested w100">
+        <h3>Jobs you may be interested in</h3>
+        <p>Set up your jobs preferences <span>so we can recommend the right jobs to you.</span></p>
+      </div>
+      <div class="postMain w100">
+        <job-detail [Url]="Url"></job-detail>
+      </div>
+      <div class="w100 text-center more"><a><img src="../../../assets/img/more.png"></a></div>
+    </div>
+  </div>
+  <div class="boxIn_rit">
+    <div class="reportHed">
+      <bs-recommended [recUrl]="recommendUrl" [jobs]="jobsHere"></bs-recommended>
+      <bs-adz [adz]="adz"></bs-adz>
+      <div class="w100 store">
+        <a><img src="../../../assets/img/Ads.png"></a>
+      </div>
+    </div>
+  </div>
+</div>

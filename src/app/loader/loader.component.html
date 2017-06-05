@@ -1,0 +1,6 @@
+<div *ngIf="loading" class="loader-here" [style.min-height.px]="heigth">
+  <i class="fa fa-cog fa-spin fa-4x fa-spin" [style.margin-top.px]="margin"></i>
+</div>
+<div *ngIf="error">
+  <p>Error while loading the content.</p>
+</div>

@@ -1,0 +1,186 @@
+.form-group.women{
+    float: left;
+    width: 40%;
+    margin: 10px 1% 0 0;
+}
+select{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    height: 43px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 15px;
+}
+.postal-code{
+    width: 27%;
+    margin-right: 1%;
+    float: left;
+}
+.postal-code input{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    background: #fff;
+    height: 43px;
+    resize: none;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    font-family: 'AvenirNextLTW01RegularRegular';
+    letter-spacing: .9px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.age-here{
+    float: left;
+    width: 31%;
+}
+.age-here .firstAge{
+    margin: 10px 1% 0 0;
+    width: 39%;
+    float: left;
+}
+.age-here p{
+    margin: 20px 10px 0;
+    font-size: 18px;
+    color: #fff;
+    float: left;
+}
+.age-here .lastAge{
+    margin: 10px 0 0 0;
+    width: 40%;
+    float: left;
+}
+.online.form-group, .potos.form-group{
+    float: left;
+    color: #fff;
+    width: 13%;
+    margin-bottom: 0;
+}
+.online.form-group input, .potos.form-group input{
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+.online.form-group label, .potos.form-group label{
+    padding-left: 30px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: url(../../../../assets/img/csscheckbox.png);
+    background-repeat: no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.online.form-group input[type=checkbox]:checked + label, .potos.form-group input[type=checkbox]:checked + label {
+    background-position: 0 -24px;
+}
+.submit-button{
+    float: left;
+    width: 17%;
+    text-align: right;
+}
+.submit-button button{
+    float: right;
+    margin: 0;
+    line-height: 18px;
+    width: 116px;
+}
+.bs-filterDating .Drop{
+    float: left;
+    width: 57%;
+    margin-top: 0;
+    margin: 0;
+}
+.bs-filterDating .Drop .form-group{
+    float: right;
+    width: 28%;
+}
+.bs-filterDating .Drop .form-group .col-md-12{
+    padding: 0;
+}
+.bs-filterDating .Drop .form-group select{
+    background: inherit;
+    color: #70808b!important;
+    border: none;
+    box-shadow: none!important;
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 30px;
+}
+.submit-button button:hover, .submit-button button:active{
+    outline:none;
+}
+.Drop .form-group{
+    margin-bottom: 0;
+}
+@media (min-width:600px) and (max-width:767px){
+    .age-here{
+        width: 31%;
+    }
+    .age-here .firstAge, .age-here .lastAge{
+		width: 35%;
+	}
+    .online.form-group{
+        width: 19%;
+    }
+    .potos.form-group{
+        width: 25%;
+    }
+    .bs-filterDating .Drop{
+        width: 34%;
+    }
+    .bs-filterDating .Drop .form-group{
+        width: 120px;
+    }
+    .bs-filterDating .submit-button{
+        width: 22%;
+    }
+    .bs-filterDating .submit-button button{
+        width: 100%;
+        font-size: 11px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .age-here{
+        width: 31%;
+    }
+    .age-here .firstAge, .age-here .lastAge{
+		width: 35%;
+	}
+    .online.form-group{
+        width: 19%;
+    }
+    .potos.form-group{
+        width: 25%;
+    }
+    .bs-filterDating .Drop{
+        width: 34%;
+    }
+    .bs-filterDating .Drop .form-group{
+        width: 120px;
+    }
+    .bs-filterDating .submit-button{
+        width: 22%;
+    }
+    .bs-filterDating .submit-button button{
+        width: 100%;
+        font-size: 14px;
+    }
+}

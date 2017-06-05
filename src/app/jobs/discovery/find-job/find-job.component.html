@@ -1,0 +1,42 @@
+<div class="box_mess2">
+  <div class="w100">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.form)">
+      <div class="form-group">
+        <input 
+          class="textinput fl form-control" 
+          type="text" 
+          placeholder="Job title, keywords or company name"
+          name="title"
+          #title="ngModel"
+          ngModel
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          class="textinput fr form-control" 
+          type="text" 
+          placeholder="Location"
+          name="location"
+          #location="ngModel"
+          ngModel
+          ng2-google-place-autocomplete
+          [options]='options' 
+          (setAddress) = "getAddress($event)"
+        >                            
+      </div>
+      <div class="w100">
+        <button class="postBTN" type="submit">Find</button>  
+        <div class="Drop">
+          <div class="form-group">
+            <div class="col-md-12">
+              <select id="selectbasic" name="selectbasic" #selectbasic="ngModel" ngModel class="form-control">
+                <option value="">Social Platform</option>
+                <option *ngFor="let option of selectOptions" value="{{option.value}}">{{option.title}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>                        
+  </div>                  
+</div>

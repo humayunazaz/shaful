@@ -1,0 +1,24 @@
+<div class="friends-content">
+  <div class="col-sm-12 bs-friends">
+    <div class="head">
+      <h4>Friends</h4>
+    </div>
+    <div class="search-here">
+      <friend-search (results)="showResults($event)"></friend-search>
+    </div>
+    <bs-loader [loading]="loading" [error]="error" [height]="height"></bs-loader>
+    <div class="search-results" *ngIf="show && !loading && !error">
+      <div class="col-sm-3 each-result" *ngFor="let result of Sortedresults">
+        <div class="result">
+          <div class="result-img">
+            <img src="{{result.profile_picture}}">
+          </div>
+          <div class="font-xs">
+            <b>{{result.fullName}}</b>
+          </div>
+          <button class="btn btn-custom btn-success" (click)="addFriend(result.id)">Connect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

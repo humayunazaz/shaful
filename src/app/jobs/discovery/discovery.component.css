@@ -1,0 +1,6 @@
+.interested { display:block; border-bottom:1px solid #e1e9f0; background:#fff; min-height:85px; padding:23px 19px 10px;}
+.interested h3 {float: left;width: 100%;margin: 0;font-size: 15px;color: #292b2c;font-family: 'AvenirNextLTPro-Demi';letter-spacing: .3px;}
+.interested p { color:#e51c43; font-weight:400; float:left; width:100%; font-size:14px}
+.interested span { color:#000; display:inline-block;}
+
+.postMList2 .postActionz { margin:0;}

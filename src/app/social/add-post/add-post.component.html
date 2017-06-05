@@ -1,0 +1,13 @@
+<form [formGroup]='post' (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <textarea
+      type="text"
+      placeholder="Status"
+      class="form-control"
+      formControlName='text'
+    ></textarea>
+  </div>
+  <div class="col-sm-12">
+    <button type="submit" class="btn btn-primary red-button" [disabled]='!post.valid'>post</button>
+  </div>
+</form>

@@ -1,0 +1,42 @@
+#left-panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 904;
+	padding-top: 54px
+}
+aside{
+    display: block;
+    background: #2f323c!important;
+    min-height: 100%;
+    width: 137px;
+}
+.login-info{
+  display: block;
+  font-size: 11px;
+  height: 26px;
+  color: #707075;
+  width: 100%;
+  margin: 0!important;
+  line-height: 28px;
+  text-align: center;
+}
+#left-panel.hide-panel{
+	left: -210px;
+}
+.menu-item-parent{
+	float: left;
+	width: 100%;
+}
+.menu-item-parent p{
+	margin-top: 5px;
+}
+li.active .menu-item-parent{
+	color: #db5d64;
+}
+li a:hover .menu-item-parent{
+	color: #db5d64;
+}
+li .menu-item-parent{
+	color: #c0bbb7;
+}

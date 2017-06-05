@@ -1,0 +1,38 @@
+{
+  "name": "Petyr Baelish",
+  "title": "Angular2 Developer",
+  "img": "./assets/img/user_pic.jpg",
+  "emailAddress": "petyr baelish@gmail.com",
+  "mobile": "92-876-2876390",
+  "skillLevel": "Senior",
+  "bio": "Matt graduated from Cornell University in 2004 with a Bachelor degree in computer science and a specialization in mathematics. While there, he published two articles on Code-project.",
+  "skills": ["HTML", "CSS", "Javascript", "Angularjs2"],
+  "imgGallery": [
+    "../../../assets/img/user.jpg",
+    "../../../assets/img/user.jpg",
+    "../../../assets/img/user.jpg",
+    "../../../assets/img/user.jpg"
+  ],
+  "upcommingEvents": [
+    {
+      "title": "Super Photography 2016",
+      "date": "January 13th, Vienna - 6:30 PM"
+    },
+    {
+      "title": "Photox Expo",
+      "date": "March 28th, Paris - 7:30 PM"
+    }
+  ],
+  "notification" : {
+    "icon": "fa-bell",
+    "value": "2"
+  },
+  "email": {
+    "icon": "fa-envelope",
+    "value": "101"
+  },
+  "bookmark": {
+    "icon": "fa-heart",
+    "value": "18"
+  }
+}

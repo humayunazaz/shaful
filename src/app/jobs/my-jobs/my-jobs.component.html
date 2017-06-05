@@ -1,0 +1,22 @@
+<div class="job-discovery">
+  <div class="left-content-area">
+    <div class="boxIn_lft">
+      <div class="interested w100">
+        <h3 class="text-center">Jobs You Are Applied In</h3>
+      </div>
+      <div class="postMain w100">
+        <job-detail [Url]="Url" [applied]="applied"></job-detail>
+      </div>
+      <div class="w100 text-center more"><a><img src="../../../assets/img/more.png"></a></div>
+    </div> 
+  </div>
+  <div class="boxIn_rit">
+    <div class="reportHed">
+      <bs-recommended [recUrl]="recommendUrl" [jobs]="jobsHere"></bs-recommended>
+      <bs-adz [adz]="adz"></bs-adz>
+      <div class="w100 store">
+        <a><img src="../../../assets/img/Ads.png"></a>
+      </div>
+    </div>
+  </div>
+</div>

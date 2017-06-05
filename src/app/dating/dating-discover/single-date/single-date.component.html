@@ -1,0 +1,29 @@
+<div class="postMain w100">
+  <div class="postMList3" *ngFor="let date of dates">
+      <div class="boxPic4">
+        <img src="../../../../assets/{{date.image}}">
+        <a class="fullProf2" (click)="albumClick(date.id)">View Album</a>
+      </div>
+      <a class="fullProf" (click)="profileClick(date.id)">View Full Profile</a>                       	
+      <h3>{{date.name}}</h3>
+      <h2>Profile created by {{date.createdBy}}</h2> 
+      <div class="w100" *ngIf="!special && !sentRequest && !receivedRequest">
+          <button class="postBTN stBTN fl" type="button" (click)="interested(date.id)">Yes, I’m INTERESTED</button>
+          <button class="postBTN stBTN fl" type="button" (click)="mayBe(date.id)">May Be</button>
+          <button class="postBTN stBTN fl no" type="button" (click)="No(date.id)">No</button>
+      </div>
+      <div class="w100" *ngIf="special">
+          <button class="postBTN stBTN fl" type="button" (click)="sendRequest(date.id)">Send Request</button>
+          <button class="postBTN stBTN fl" type="button" (click)="maybeLater(date.id)">May Be Later</button>
+          <button class="postBTN stBTN fl no" type="button" (click)="block(date.id)">Block</button>
+      </div> 
+      <div class="w100" *ngIf="sentRequest">
+          <button class="postBTN stBTN fl no" type="button" (click)="cancelRequest(date.id)">Cancel Request</button>
+      </div>
+      <div class="w100" *ngIf="receivedRequest">
+          <button class="postBTN stBTN fl" type="button" (click)="acceptRequest(date.id)">Accept</button>
+          <button class="postBTN stBTN fl" type="button" (click)="cancel(date.id)">Cancel</button>
+          <button class="postBTN stBTN fl no" type="button" (click)="blockPermanentely(date.id)">Block Permanentely</button>
+      </div> 
+  </div>
+</div>

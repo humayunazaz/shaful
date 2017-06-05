@@ -1,0 +1,21 @@
+.bs-dropdown{
+  padding: 10px;
+}
+ul{
+  padding: 5px;
+  list-style: none;
+  float: right;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+ul.bs-dropdown{
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+i{
+  font-size: 19px;
+  color: #9b9c9f;
+  margin: 13px 20px 10px!important;
+}

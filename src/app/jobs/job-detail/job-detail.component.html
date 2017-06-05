@@ -1,0 +1,14 @@
+<bs-loader [loading]="loading" [error]="error"></bs-loader>
+<div *ngIf="jobs != ''">
+  <div class="postMList2" *ngFor="let job of jobs">
+    <div class="boxPic2"><img src="{{job.img}}"></div>
+    <h3>{{job.title}}</h3>
+    <h3>{{job.companyName}}</h3>                         	
+    <h2>{{job.location.country}} - {{job.location.city}}</h2>  
+    <div class="w100 pozrel comentPics">
+      <div class="rounPicR" *ngFor="let connect of job.connects"><img src="{{connect}}"></div>
+      <span>{{job.totalConnects}} connections work here...</span>
+      <button class="postBTN fr" type="button" (click)="applyJob(job)" *ngIf="!applied">Apply</button> 
+    </div>
+  </div>
+</div>

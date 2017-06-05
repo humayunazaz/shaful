@@ -1,0 +1,14 @@
+/*===*/
+.w100 .nav-tabs li.active a {
+    background: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    color: #d32a47;
+    cursor: pointer;
+}
+.w100 .nav-tabs li a {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 9px 5px;
+    color: #000;
+}

@@ -1,0 +1,10 @@
+.sortable-grid.ui-sortable{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.sortable-grid.ui-sortable .child-tabs{
+  width: 100%;
+  border: none;
+  margin: 0 0 19px;
+  margin-top: 5px;
+}

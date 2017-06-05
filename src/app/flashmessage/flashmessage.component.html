@@ -1,0 +1,15 @@
+<div class="flash-message"
+  [ngClass]="{
+    'alert-danger' : fail,
+    'alert-success' : success,
+    hidden: close
+  }"
+>
+  <div class="message-hidden">
+    <i class="fa fa-times" (click)="closeMessage()"></i>
+  </div>
+  <div class="message-here">
+    <h3>Alert</h3>
+    <p>{{content}}</p>
+  </div>
+</div>

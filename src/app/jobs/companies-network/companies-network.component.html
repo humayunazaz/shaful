@@ -1,0 +1,282 @@
+<div class="resume-here" 
+    [ngClass]="{
+        formOnly: !personalS && width > 767 
+    }"
+>
+    <div class="box_mess2 resume-detail"
+        [ngClass]="{
+            onlyForm: !personalS
+        }"
+    >
+        <div class="w100">
+            <div class="profile-card vcard entity" tabindex="0">
+                <div class="profile-picture uploaded-pic">
+                    <img src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png" width="200" height="200" class="ghost" alt="rizwan javed">
+                    <button class="edit-photo no-photo" id="control_gen_3">
+                        <span class="edit-photo-content"><span>Add a photo</span>
+                        <span class="change-photo-msg">Change photo</span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="form">
+                <label for="cname" class="control-label col-sm-12 head-here"> Enter Personal Detils<span>*</span></label>
+                <form class="form-validate form-horizontal" [formGroup]="personal" (ngSubmit)="personalSubmit()">     
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2"> First Name<span>*</span></label>
+                        <div class="col-sm-4">
+                            <input 
+                                class="form-control valid" 
+                                type="text" 
+                                placeholder="FIRST NAME"
+                                formControlName="firstName"
+                            >
+                        </div>
+                        <label for="cname" class="control-label col-sm-2">Last Name<span>*</span></label>
+                        <div class="col-sm-4">
+                            <input 
+                                class="form-control valid" 
+                                placeholder="LAST NAME" 
+                                type="text"
+                                formControlName="lastName"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Age<span>*</span></label>
+                        <div class="col-sm-4">
+                            <input 
+                                class="form-control valid" 
+                                type="text" 
+                                placeholder="Age"
+                                formControlName="age"
+                            >
+                        </div>
+                        <label for="cname" class="control-label col-sm-2">Phone<span>*</span></label>
+                        <div class="col-sm-4">
+                            <input 
+                                class="form-control valid" 
+                                placeholder="Phone" 
+                                type="text"
+                                formControlName="phone"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Email Address<span>*</span></label>
+                        <div class="col-sm-10">
+                            <input 
+                                class="form-control valid" 
+                                type="text" 
+                                placeholder="Email"
+                                formControlName="email"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="ccomment" class="control-label col-sm-2">Details about  you & your Goal</label>
+                        <div class="col-sm-10">
+                            <textarea 
+                                class="form-control valid" 
+                                rows="5" 
+                                id="ccomment"
+                                formControlName="description"    
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="w100">
+                        <div class="w100">                         
+                        <button class="postBTN fr stBTN" type="submit" [disabled]="!personal.valid">Post personal details & Proceed Further</button>              
+                        </div>                        
+                    </div>   
+                </form>
+            </div>
+            <div class="form" *ngIf="personalS">
+                <label for="cname" class="control-label col-sm-12"> Enter Educational Details<span class="required">*</span></label>
+                <form class="form-validate form-horizontal" [formGroup]="educational" (ngSubmit)="educationalSubmit()">
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Last Degree<span class="required">*</span></label>
+                        <div class="col-sm-10">
+                            <input 
+                                class="form-control valid" 
+                                type="text" 
+                                placeholder=""
+                                formControlName="lastDegree"
+                            >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Institution<span class="required">*</span></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" formControlName="institute">
+                            <option value="" selected>select</option>
+                            <option value="university 1">university 1</option>
+                            <option value="university 2">university 2</option>
+                            <option value="university 3">university 3</option>
+                            <option value="university 4">university 4</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Majors<span class="required">*</span></label>
+                        <div class="col-sm-10">
+                        <textarea 
+                            class="form-control valid" 
+                            rows="5" 
+                            id="ccomment" 
+                            name="comment"
+                            formControlName="majors"
+                        ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label for="ccomment" class="control-label col-sm-2">Year passed</label>
+                        <div class="col-sm-10">
+                            <input 
+                                class="form-control valid" 
+                                id="cname" 
+                                name="fullname" 
+                                type="text" 
+                                placeholder=""
+                                formControlName="yearPassed"    
+                            >
+                        </div>   
+                    </div>
+                    <div class="w100">                         
+                        <div class="w100">
+                            <button class="postBTN fr stBTN" type="submit" [disabled]="!educational.valid">Post Eduacational Details & Proceed Next</button>                
+                        </div>                        
+                    </div>   
+                </form>
+            </div>
+            <div class="form" *ngIf="personalS && educationS">
+                <label for="cname" class="control-label col-sm-12"> Enter Experience Details<span class="required">*</span></label>
+                <form class="form-validate form-horizontal" [formGroup]="experience" (ngSubmit)="experienceSubmit()">
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Experience IN<span class="required">*</span></label>
+                        <div class="col-sm-3">
+                            <select class="form-control" formControlName="category">
+                                <option value="" selected>Select</option>
+                                <option value="it">IT</option>
+                                <option value="networking">Networking</option>
+                                <option value="Front-end">Front-end</option>
+                            </select>
+                        </div>
+                        <label for="cname" class="control-label col-sm-2">Durration<span class="required">*</span></label>
+                        <div class="col-sm-3">
+                            <select class="form-control" formControlName="durration">
+                                <option value="6 months">6 Months</option>
+                                <option value="1 year">1 Years</option>
+                                <option value="2 years">2 Years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Company<span class="required">*</span></label>
+                        <div class="col-sm-10">
+                            <select class="form-control" formControlName="company">
+                                <option  value="Company 1">Company 1</option>
+                                <option value="Company 2" >Company 2</option>
+                                <option value="Company 3">Company 3</option>
+                                <option value="Company 4">Company 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="control-label col-sm-2">Experience Details<span class="required">*</span></label>
+                        <div class="col-sm-10">
+                            <textarea 
+                                class="form-control valid" 
+                                rows="5" 
+                                id="ccomment" 
+                                name="comment"
+                                formControlName="detail"    
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="w100">                         
+                        <div class="w100">
+                            <button class="postBTN fr stBTN" type="submit" [disabled]="!experience.valid">Post EXperience Details</button>                      
+                        </div>                        
+                    </div>   
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="box_mess22 resume-detail-show" *ngIf="personalS && width > 767">
+        <div class="w100 progress-detail">
+            <label class="control-label col-sm-12">Previous Resume<span class="required"></span></label>
+            <div class="profile-picture">
+                <img src="{{userPic}}" class="ghost img-responsive" alt="rizwan javed">
+            </div>
+            <div class="w100 resume-information">
+                <label for="cname" class="control-label col-sm-12">Personal INFO<span class="required"></span></label>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Full Name :</label>
+                    <li class="col-sm-8">{{personalDetail.firstName}} {{personalDetail.lastName}}</li>     
+                </ul>
+                    <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Phone :</label>
+                    <li class="col-sm-8">{{personalDetail.phone}}</li>     
+                </ul>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Email :</label>
+                    <li class="col-sm-8">{{personalDetail.email}}</li>     
+                </ul>
+                <div class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Details :</label>
+                    <p class="p col-sm-8">
+                        {{personalDetail.description}}
+                    </p>     
+                </div>
+                <hr>  
+            </div>
+            <div class="w100 resume-information" *ngIf="educationS">
+                <label for="cname" class="control-label col-sm-12">Educational Background<span class="required"></span></label>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Last Degree :</label>
+                    <li class="col-sm-8">{{educationalDetail.lastDegree}}</li>     
+                </ul>
+                    <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">From :</label>
+                    <li class="col-sm-8">{{educationalDetail.institute}}</li>     
+                </ul>
+                    <div class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Majors :</label>
+                    <p class="p col-sm-8"> 
+                        {{educationalDetail.majors}}
+                    </p>     
+                </div>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Passed IN :</label>
+                    <li class="col-sm-8">{{educationalDetail.yearPassed}}</li>     
+                </ul>
+            </div>
+            <div class="w100 resume-information" *ngIf="experienceS">
+                <label for="cname" class="control-label col-sm-12">Summery Of Experience<span class="required"></span></label>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Experience Field:</label>
+                    <li class="col-sm-8">{{experienceDetail.category}}</li>     
+                </ul>
+                    <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Durration:</label>
+                    <li class="col-sm-8">{{experienceDetail.durration}}</li>     
+                </ul>
+                <ul class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Company:</label>
+                    <li class="col-sm-8">{{experienceDetail.company}} </li>     
+                </ul>
+                <div class="col-sm-12">
+                    <label for="cname" class="control-label col-sm-4">Details Of Experience :</label>
+                    <p class=" p col-sm-8">
+                        {{experienceDetail.detail}}
+                    </p>     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>               
+
+                        
+                     
+                                     
+                                                        
